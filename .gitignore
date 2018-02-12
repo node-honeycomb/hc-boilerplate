@@ -57,3 +57,6 @@ typings/
 # dotenv environment variables file
 .env
 
+assets/
+auto_router.js
+package-lock.json
