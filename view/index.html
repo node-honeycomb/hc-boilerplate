@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="<%= G.i18nLang %>">
+<head>
+  <meta charset="UTF-8">
+  <title>example</title>
+  <link rel="icon" id="favicon" href="<%= prefix %>/assets/logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="<%= prefix %>/assets/app.css">
+  <% if (privateCloud) { %>
+    <link rel="stylesheet" href="<%= prefix %>/assets/static/font/private.css">
+  <% } else { %>
+    <link rel="stylesheet" href="<%= prefix %>/assets/static/font/public.css">
+  <% } %>
+  <script>
+    // 1. csrf
+    window.ajaxHeader = {
+      'x-csrf-token': '<%= csrfToken %>'
+    };
+
+    // 2. env
+    window.CONFIG = {};
+    window.CONFIG.prefix = '<%= prefix %>';
+    window.CONFIG.env = '<%= env %>';
+    window.CONFIG.privateCloud = <%= privateCloud %>;
+  </script>
+</head>
+<body>
+  <div id="main"></div>
+  <% if (isDebug) { %>
+    <script src="<%= prefix %>/assets/.build/build.js"></script>
+  <% } %>
+  <script src="<%= prefix %>/assets/vendor.js"></script>
+  <script src="<%= prefix %>/assets/app.js"></script>
+</body>
+</html>
