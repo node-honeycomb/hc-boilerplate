@@ -7,7 +7,7 @@ each branch is a template project:
 
 ## how to add a new boilerplate
 
-hc-boilerplate use subtree to manage boilerplates.
+This repository use subtree to manage boilerplates.
 
 add
 
