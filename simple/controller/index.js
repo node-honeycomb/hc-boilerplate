@@ -48,3 +48,4 @@ exports.helloGen = function* (req) {
 exports.helloGen = async function (req) {
   return 'hello';
 };
+
