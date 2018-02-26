@@ -20,14 +20,6 @@ module.exports = {
       config: {
         secret: 'defalutSecret!PLEASE!REPLACE!'
       }
-    },
-    public: {
-      enable: true,
-      router: '/static',
-      extends: 'static',
-      config: {
-        root: path.join(__dirname, '../static')
-      }
     }
   },
   extension: {
