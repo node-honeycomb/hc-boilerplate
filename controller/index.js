@@ -37,6 +37,14 @@ exports.helloOrigin = function (req, res) {
  * 支持 generatorFunction, 使用方式和上面一样，如果需要nowrap, 同样加个注解
  * @api /api/hello_gen
  */
-exports.helloGen = function* (req, callback) {
-  callback(null, 'hello');
+exports.helloGen = function* (req) {
+  return 'hello';
+};
+
+/**
+ * 支持 asyncFunction, 使用方式和上面一样，如果需要nowrap, 同样加个注解
+ * @api /api/hello_async
+ */
+exports.helloGen = async function (req) {
+  return 'hello';
 };

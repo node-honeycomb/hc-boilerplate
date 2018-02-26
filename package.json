@@ -1,7 +1,7 @@
 {
   "name": "hc-boilerplate-simple",
   "version": "1.0.0",
-  "description": "default seed project for honeycomb-cli.",
+  "description": "a simple hc-bee boilerplate",
   "main": " ",
   "scripts": {
     "test": "make test",
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/node-honeycomb/hc-boilerplate#readme",
   "dependencies": {
-    "hc-bee": "^0.0.3",
+    "hc-bee": "^0.0.4",
     "lodash": "4.17.4"
   },
   "devDependencies": {
