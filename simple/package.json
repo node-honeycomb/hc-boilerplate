@@ -1,12 +1,13 @@
 {
   "name": "hc-boilerplate-simple",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a simple hc-bee boilerplate",
   "main": "",
   "scripts": {
     "test": "make test",
     "eslint": "eslint --ext .js --ext .jsx --ignore-path .gitignore .",
-    "prepublishOnly": "cp .gitignore gitignore"
+    "prepublishOnly": "cp .gitignore gitignore",
+    "postpack": "rm -f gitignore"
   },
   "repository": {
     "type": "git",
