@@ -1,0 +1,44 @@
+<% include common/header.html %>
+  <h1 class="title">
+    <span class="title-text">Welcome to hc-bee sample app!</span>
+  </h1>
+  <div class="content">
+    <h2>hello</h2>
+    <h3>这是一个简单的应用，前端基于jquery，但是它支持像node一样加载脚本模块</h3>
+    <p>
+     1. 先根据浏览器访问路径定位到控制器方法, 控制器目录：controller。
+    </p>
+    <p>
+     2. 再根据控制器方法中确定，调用哪个模板文件，模板文件的根目录为： view
+    </p>
+    <p>
+     3. 根据模板查看到模板的入口前端脚本文件，前端的根目录为：assets
+    </p>
+
+    到这里，整个工程的寻址逻辑基本就清晰了，可以根据自己的需求增加文件，编辑逻辑
+  </div>
+  <script src="<%= prefix %>/assets/cube.js"></script>
+  <script>
+    /**
+     * cube更详细的参考文档： https://npm.taobao.org/package/node-cube
+     */
+    (function () {
+      Cube.init({
+        debug: <%= debug %>,
+        base: '<%= prefix %>/assets',
+        /**
+         * file version in querystring, used for flushing client side
+         * @type {Number}
+         */
+        version: '<%= version %>',
+        /**
+         * setup loading script timeout setup
+         */
+        timeout: 15000,
+      });
+      Cube.use('/scene/index/index.js', () => {
+
+      });
+    })();
+  </script>
+<% include common/footer.html %>
