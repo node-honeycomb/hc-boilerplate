@@ -1,0 +1,27 @@
+
+body {
+  padding: 25px;
+}
+.title-logo{
+  width: 35px;
+  height: 40px;
+  vertical-align: middle;
+}
+.title-text{
+  margin-left: 15px;
+}
+.content{
+  margin-top: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+h3{
+  margin: 20px 0 10px 0;
+}
+pre {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #333;
+}
