@@ -1,0 +1,103 @@
+@import "~antd/lib/style/themes/default.less";
+
+.j-scene-signup{
+  width: 354px;
+  margin: 0 auto;
+  
+  form .ant-input-lg,
+  form .ant-input-number-lg,
+  form .ant-cascader-picker-large,
+  form .ant-select-lg,
+  form .ant-calendar-picker-large,
+  form .ant-time-picker-large,
+  form .ant-radio-group-large,
+  form .ant-input-group-wrapper-lg .ant-input-group-addon {
+    top: 0;
+  }
+  
+  .ant-form-item {
+    margin-bottom: 24px;
+    .ant-form-item-label{
+      display: none;
+    }
+  }
+  .ant-tabs-ink-bar{
+    width: 90px !important;
+  }
+
+  .ant-tabs {
+    padding: 0 2px;
+    margin: 0 -2px;
+    .ant-tabs-bar{
+      border-bottom: 0;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .ant-tabs-tab {
+      font-size: 16px;
+      line-height: 24px;
+      height: 46px;
+    }
+    .ant-input-affix-wrapper .ant-input:not(:first-child) {
+      padding-left: 34px;
+    }
+  }
+
+  .prefixIcon {
+    font-size: @font-size-base;
+    color: @disabled-color;
+  }
+
+  .ant-input-affix-wrapper .ant-input{
+    min-height: 0;
+  }
+
+  .ant-checkbox-wrapper{
+    width: 100%;
+    .elem-forgot{
+      float: right;
+    }
+  }
+  .elem-captcha{
+    .ant-input{
+      width: calc(~"100% - 110px");
+    }
+    .elem-captcha-btn{
+      width: 102px;
+      margin-right: -12px;
+    }
+  }
+
+  .ant-btn-primary{
+    width: 50%;
+  }
+
+  .status-success, .status-warning, .status-error {
+    transition: color .3s;
+  }
+  
+  .status-success {
+    color: @success-color;
+  }
+  
+  .status-warning {
+    color: @warning-color;
+  }
+  
+  .status-error {
+    color: @error-color;
+  }
+
+  .progress-pass > .progress {
+    :global {
+      .ant-progress-bg {
+        background-color: @warning-color;
+      }
+    }
+  }
+  .elem-login{
+    position: absolute;
+    right: 0;
+    margin-top: -50px;
+  }
+}

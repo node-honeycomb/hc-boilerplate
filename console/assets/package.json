@@ -1,0 +1,30 @@
+{
+  "version": "0.0.1",
+  "name": "boilerplate-console-portal",
+  "author": {
+    "name": "@beatle-group"
+  },
+  "keywords": [
+    "webpack",
+    "beatle"
+  ],
+  "description": "Beatle样本库 - 管控台项目",
+  "dependencies": {
+    "hc-honeypack-auto-module-plugin": "0.0.4",
+    "hc-mocker": "0.0.3",
+    "hc-components": "0.2.11",
+    "damo-cli-docco-plugin": "0.0.5",
+    "beatle": "0.0.19",
+    "antd": "3.0.0",
+    "classnames": "2.2.5",
+    "react": "15.5.0",
+    "react-dom": "15.5.0",
+    "prop-types": "15.6.0",
+    "lodash": "4.17.4",
+    "babel-standalone": "6.26.0",
+    "react-container-query": "^0.9.1",
+    "react-document-title": "^2.0.3"
+  },
+  "readmeFilename": "README.md",
+  "license": "MIT"
+}
