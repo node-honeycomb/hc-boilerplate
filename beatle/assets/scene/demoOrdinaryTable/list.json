@@ -1,0 +1,23 @@
+{
+    "data": [
+        {
+            "key": "1",
+            "name": "马肱",
+            "age": 32,
+            "address": "New York No. 1 Lake Park"
+        },
+        {
+            "key": "2",
+            "name": "无惟",
+            "age": 42,
+            "address": "London No. 1 Lake Park"
+        },
+        {
+            "key": "3",
+            "name": "燕婷",
+            "age": 32,
+            "address": "Sidney No. 1 Lake Park"
+        }
+    ],
+    "code": "SUCCESS"
+}
