@@ -1,9 +1,8 @@
 # hc-boilerplate-simple
 
-
-
 ## usage
 
 ```sh
-honeycomb init -t simple simple
+honeycomb init -t beatle beatle
 ```
+
