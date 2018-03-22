@@ -20,7 +20,12 @@ module.exports = {
       config: {
         secret: 'defalutSecret!PLEASE!REPLACE!'
       }
-    }
+    },
+    webpack: {
+      enable: true,
+      module: 'honeypack',
+      router: '/assets'
+    },
   },
   extension: {
   }

@@ -1,6 +1,6 @@
 install:
-	@npm install
-	@cd assets && npm install
+	@npm install --registry=https://registry.npm.taobao.org
+	@cd assets && npm install --registry=https://registry.npm.taobao.org
 
 release: front
 	@echo "env: ${env}"

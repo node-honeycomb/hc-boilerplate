@@ -61,3 +61,7 @@ package-lock.json
 auto_router.js
 runtime_config.json
 
+auto_models.js
+auto_routes.js
+
+.build

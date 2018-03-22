@@ -1,13 +1,16 @@
 {
-  "name": "hc-boilerplate-simple",
-  "version": "1.0.2",
-  "description": "a simple hc-bee boilerplate",
+  "name": "hc-boilerplate-beatle",
+  "version": "1.0.0",
+  "description": "a simple hc-bee boilerplate with beatle.",
   "main": "",
   "scripts": {
     "test": "make test",
     "eslint": "eslint --ext .js --ext .jsx --ignore-path .gitignore .",
     "prepublishOnly": "cp .gitignore gitignore",
     "postpack": "rm -f gitignore"
+  },
+  "eslintConfig": {
+    "extends": "aliyun"
   },
   "repository": {
     "type": "git",
@@ -23,8 +26,9 @@
   },
   "homepage": "https://github.com/node-honeycomb/hc-boilerplate#readme",
   "dependencies": {
-    "hc-bee": "^0.0.4",
-    "lodash": "4.17.4"
+    "hc-bee": "^0.0.6",
+    "honeypack": "0.1.12",
+    "lodash": "4.17.5"
   },
   "devDependencies": {
     "mocha": "^5.0.0",

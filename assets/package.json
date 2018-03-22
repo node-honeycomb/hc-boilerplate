@@ -1,10 +1,28 @@
 {
-  "name": "assets",
+  "name": "honeycomb-seed-front",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "honeycomb-front use beatle.",
+  "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": ""
+  "keywords": [
+    "beatle",
+    "react",
+    "redux",
+    "react-router"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "beatle": "0.0.19",
+    "beatle-dialog": "2.0.1",
+    "antd": "2.13.2",
+    "classnames": "2.2.5",
+    "debug": "3.1.0",
+    "lodash": "4.11.1",
+    "react": "15.3.0",
+    "react-dom": "15.3.0",
+    "prop-types": "15.6.1"
+  }
 }

@@ -11,7 +11,7 @@ exports.helloText = function (req, callback) {
 };
 
 /**
- * @api /
+ * @api /welcome
  */
 exports.welcomeTpl = function (req, callback) {
   callback(null, {
@@ -22,6 +22,21 @@ exports.welcomeTpl = function (req, callback) {
   }, 'html');
 };
 
+/**
+ * @api /*
+ * @nowrap
+ */
+exports.demoPage = demoPage;
+
+function demoPage(req, res) {
+  res.render('index.html', {
+    isDebug: config.debug,
+    csrfToken: req.csrfToken(),
+    prefix: config.staticPath || (config.prefix === '/' ? '' : config.prefix),
+    env: config.env,
+    privateCloud: !!config.privateCloud
+  });
+};
 
 /**
  * 如需要使用原始的API, 请加上  nowrap 标记
