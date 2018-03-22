@@ -1,0 +1,80 @@
+#!/usr/bin/env node
+
+var cmd = require('commander'),
+  path = require('path'),
+  fs = require('fs');
+
+cmd.option('-t --table <file>', 'parse schema by table-file', function (file) {
+  if (file) {
+    process.env.TABLE_FILE = path.join(process.cwd(), file);
+  }
+});
+
+cmd.parse(process.argv);
+
+(function () {
+  var formatMap = {
+    datetime: 'DATE_TIME',
+    timestamp: 'TIMESTAMP',
+    url: 'URL',
+    email: 'email',
+    id: 'uuid'
+  }
+  var typeMap = {
+    bigint: 'number',
+    decimal: 'number',
+    smallint: 'integer',
+    tinyint: 'integer',
+    varchar: 'string',
+    text: 'string'
+  }
+  var dirPath = process
+    .env
+    .TABLE_FILE
+    .substr(0, process.env.TABLE_FILE.lastIndexOf('/'));
+  var sqlContent = fs.readFileSync(process.env.TABLE_FILE, 'UTF-8');
+  var tableReg = /CREATE\sTABLE\s`([^`]*)`([^=]*)[^']*'([^']*)'/g;
+  var tables;
+  var reg = /`([^`]*)`\s([^\s]*)\s([\w\s']*)\sCOMMENT\s'([^']*)'/g;
+  while (tables = tableReg.exec(sqlContent)) {
+    var mt;
+    var json = {
+      type: 'object',
+      title: tables[1],
+      description: tables[3],
+      properties: {}
+    };
+
+    while (mt = reg.exec(tables[2])) {
+
+      var types = mt[2].split('(');
+      var values = mt[3].split(' ');
+      if (typeMap[types[0]]) {
+        json.properties[mt[1]] = {
+          type: typeMap[types[0]]
+        }
+        if (formatMap[mt[1]]) {
+          json.properties[mt[1]].format = formatMap[mt[1]];
+        }
+      } else {
+        json.properties[mt[1]] = {
+          type: 'string'
+        }
+        if (formatMap[types[0]]) {
+          json.properties[mt[1]].format = formatMap[types[0]]
+        }
+      }
+
+      if (types[1]) {
+        json.properties[mt[1]].maxLength = parseInt(types[1].slice(0, -1));
+      }
+      if (values[values.length - 2] === 'DEFAULT') {
+        json.properties[mt[1]].default = values.pop();
+      }
+      json.properties[mt[1]].description = mt[4];
+
+      var fileName = path.join(dirPath, 'schemas/' + json.title + '.json');
+      fs.writeFileSync(fileName, JSON.stringify(json, null, 2));
+    }
+  }
+})();

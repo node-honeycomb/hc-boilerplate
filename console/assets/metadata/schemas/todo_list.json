@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "title": "todo_list",
+  "description": "列表",
+  "properties": {
+    "id": {
+      "type": "number",
+      "format": "uuid",
+      "maxLength": 20,
+      "description": "主键"
+    },
+    "gmt_create": {
+      "type": "string",
+      "format": "DATE_TIME",
+      "description": "创建时间"
+    },
+    "gmt_modified": {
+      "type": "string",
+      "format": "DATE_TIME",
+      "description": "修改时间"
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 128,
+      "description": "频道名称"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1024,
+      "default": "NULL",
+      "description": "描述"
+    },
+    "account_id": {
+      "type": "number",
+      "maxLength": 20,
+      "description": "所属用户"
+    },
+    "status": {
+      "type": "integer",
+      "maxLength": 4,
+      "description": "状态（-1.删除，1.有效）"
+    }
+  }
+}

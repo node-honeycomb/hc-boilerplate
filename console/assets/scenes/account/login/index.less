@@ -1,0 +1,102 @@
+@import "~antd/lib/style/themes/default.less";
+.j-scene-login {
+    width: 354px;
+    margin: 0 auto;
+    
+    form .ant-input-lg,
+    form .ant-input-number-lg,
+    form .ant-cascader-picker-large,
+    form .ant-select-lg,
+    form .ant-calendar-picker-large,
+    form .ant-time-picker-large,
+    form .ant-radio-group-large,
+    form .ant-input-group-wrapper-lg .ant-input-group-addon {
+      top: 0;
+    }
+
+    .ant-form-item {
+        margin-bottom: 24px;
+        .ant-form-item-label {
+            display: none;
+        }
+    }
+    .ant-tabs {
+        padding: 0 2px;
+        margin: 0 -2px;
+        .ant-tabs-bar {
+            border-bottom: 0;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .ant-tabs-tab {
+            font-size: 16px;
+            line-height: 24px;
+            height: 46px;
+        }
+        .ant-input-affix-wrapper .ant-input:not(:first-child) {
+            padding-left: 34px;
+        }
+    }
+    .prefixIcon {
+        font-size: @font-size-base;
+        color: @disabled-color;
+    }
+    .ant-input-affix-wrapper .ant-input {
+        min-height: 0;
+    }
+    .ant-checkbox-wrapper {
+        width: 100%;
+        .elem-forgot {
+            float: right;
+        }
+    }
+    .elem-captcha {
+        .ant-input {
+            width: calc(~"100% - 110px");
+        }
+        .elem-captcha-btn {
+            width: 102px;
+            margin-right: -12px;
+        }
+    }
+    .ant-btn-primary {
+        width: 100%;
+    }
+    .elem-other {
+        text-align: left;
+        margin-top: 24px;
+        line-height: 22px;
+        .iconAlipay,
+        .iconTaobao,
+        .iconWeibo {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url('https://img.alicdn.com/tfs/TB1kvmMk5qAXuNjy1XdXXaYcVXa-48-72.svg');
+            margin-left: 16px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        .iconAlipay {
+            background-position: -24px 0;
+            &:hover {
+                background-position: 0 0;
+            }
+        }
+        .iconTaobao {
+            background-position: -24px -24px;
+            &:hover {
+                background-position: 0 -24px;
+            }
+        }
+        .iconWeibo {
+            background-position: -24px -48px;
+            &:hover {
+                background-position: 0 -48px;
+            }
+        }
+        .elem-register {
+            float: right;
+        }
+    }
+}

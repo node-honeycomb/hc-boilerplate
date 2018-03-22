@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "title": "account",
+  "description": "账号表",
+  "required": ["id", "gmt_create"],
+  "properties": {
+    "id": {
+      "type": "number",
+      "format": "uuid",
+      "maxLength": 20,
+      "description": "主键"
+    },
+    "gmt_create": {
+      "type": "string",
+      "format": "DATE_TIME",
+      "description": "创建时间"
+    },
+    "gmt_modified": {
+      "type": "string",
+      "format": "DATE_TIME",
+      "description": "修改时间"
+    },
+    "mail": {
+      "type": "string",
+      "maxLength": 100,
+      "description": "登录邮箱"
+    },
+    "password": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "登录密码"
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "姓名"
+    }
+  }
+}

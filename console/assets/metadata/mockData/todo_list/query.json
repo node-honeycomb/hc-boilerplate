@@ -1,0 +1,36 @@
+{
+  "requestId": "a95f0651-cdf8-11e7-9e9a-8f967f71d2e4",
+  "code": "SUCCESS",
+  "data": {
+    "data": [
+      {
+        "id": 1,
+        "gmt_create": "2017-11-11 11:11:11",
+        "gmt_modified": "2017-11-11 11:11:11",
+        "name": "测试1",
+        "description": "描述信息",
+        "account_id": 1,
+        "status": 1
+      },
+      {
+        "id": 2,
+        "gmt_create": "2017-22-22 22:22:22",
+        "gmt_modified": "2017-22-22 22:22:22",
+        "name": "测试2",
+        "description": "描述信息",
+        "account_id": 1,
+        "status": 1
+      },
+      {
+        "id": 3,
+        "gmt_create": "2017-10-10 10:10:10",
+        "gmt_modified": "2017-10-10 10:10:10",
+        "name": "测试3",
+        "description": "描述信息",
+        "account_id": 1,
+        "status": 1
+      }
+    ],
+    "total": 3
+  }
+}

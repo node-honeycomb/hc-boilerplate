@@ -1,0 +1,11 @@
+{
+  "requestId": "a95f0651-cdf8-11e7-9e9a-8f967f71d2e4",
+  "code": "SUCCESS",
+  "data": {
+    "id": 1,
+    "gmt_create": "2017-11-11 11:11:11",
+    "gmt_modified": "2017-11-11 11:11:11",
+    "mail": "beatleGroup@aliyun.com",
+    "name": "beatle-group"
+  }
+}

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>index.jsx-document</title>
+  <link rel="stylesheet" type="text/css" href="docco.css">
+  <style>
+    .code .highlight{
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    .code .highlight pre{
+      width: 98%;
+    }
+    .code .highlight .link{
+      position: absolute;
+      top: 6px;
+      left: -6px;
+      text-decoration: none;
+      padding: 2px 4px;
+      border: 1px solid #0088cc;
+      background: #6666ff;
+      color: white;
+      line-height: 5px;
+      border-radius: 1px;
+    }
+    .code .highlight .link.open{
+      padding: 4px 4px 2px;
+    }
+    .code .highlight .link:hover{
+      background: #0088cc
+    }
+    .code .highlight .close:after{
+      font-family: "fleurons";
+      content: "-";
+    }
+    .code .highlight .open:after{
+      font-family: "fleurons";
+      content: "+";
+    }
+    .code .highlight pre.narrow{
+      overflow: hidden;
+      height: 34px;
+    }
+    pre.narrow:before{
+      position: absolute;
+      margin-top: -4px;
+      color: #f50;
+      content: '...';
+    }
+    #J_iframe{
+      width: 1000px;
+      height: 80%;
+      max-height: 600px;
+      position: absolute;
+      background: white;
+      top: 70px;
+      left: 240px;
+      visibility: hidden;
+      border: 1px solid gray;
+      z-index: 100000;
+    }
+    
+  </style>
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  
+  <div id="jump_to">
+    Jump To &hellip;
+    <div id="jump_wrapper">
+      <div id="jump_page">
+        
+          
+          <a class="source" href="account_login_index.html">
+            /Users/zhushengjia/Desktop/drive/projects/f2e/naza/hc-boilerplate-console/assets/scenes/account/login/index.jsx
+          </a>
+        
+          
+          <a class="source" href="account_signup_index.html">
+            /Users/zhushengjia/Desktop/drive/projects/f2e/naza/hc-boilerplate-console/assets/scenes/account/signup/index.jsx
+          </a>
+        
+          
+          <a class="source" href="content_baseList_index.html">
+            /Users/zhushengjia/Desktop/drive/projects/f2e/naza/hc-boilerplate-console/assets/scenes/content/baseList/index.jsx
+          </a>
+        
+          
+          <a class="source" href="dashboard_analysis_index.html">
+            /Users/zhushengjia/Desktop/drive/projects/f2e/naza/hc-boilerplate-console/assets/scenes/dashboard/analysis/index.jsx
+          </a>
+        
+          
+          <a class="source" href="detail_baseForm_index.html">
+            /Users/zhushengjia/Desktop/drive/projects/f2e/naza/hc-boilerplate-console/assets/scenes/detail/baseForm/index.jsx
+          </a>
+        
+          
+          <a class="source" href="feedback_exception_index.html">
+            /Users/zhushengjia/Desktop/drive/projects/f2e/naza/hc-boilerplate-console/assets/scenes/feedback/exception/index.jsx
+          </a>
+        
+          
+          <a class="source" href="feedback_flowResult_index.html">
+            /Users/zhushengjia/Desktop/drive/projects/f2e/naza/hc-boilerplate-console/assets/scenes/feedback/flowResult/index.jsx
+          </a>
+        
+          
+          <a class="source" href="feedback_result_index.html">
+            /Users/zhushengjia/Desktop/drive/projects/f2e/naza/hc-boilerplate-console/assets/scenes/feedback/result/index.jsx
+          </a>
+        
+          
+          <a class="source" href="feedback_trackResult_index.html">
+            /Users/zhushengjia/Desktop/drive/projects/f2e/naza/hc-boilerplate-console/assets/scenes/feedback/trackResult/index.jsx
+          </a>
+        
+          
+          <a class="source" href="index.html">
+            /Users/zhushengjia/Desktop/drive/projects/f2e/naza/hc-boilerplate-console/assets/scenes/index.jsx
+          </a>
+        
+          
+          <a class="source" href="viewSource.html">
+            /Users/zhushengjia/Desktop/drive/projects/f2e/naza/hc-boilerplate-console/assets/scenes/viewSource.jsx
+          </a>
+        
+      </div>
+    </div>
+  </div>
+  
+  <table cellspacing=0 cellpadding=0>
+  <thead>
+    <tr>
+      <th class="docs" colspan="2"><h1>index.jsx <a href="javascript:;" id="J_demo">demo</a>
+        <iframe id="J_iframe" src="" frameborder="0" scrolling="auto" ></iframe></h1>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    
+    <tr id='section-1'>
+      
+      <td class="docs header-docs" colspan="2">
+        <div class="pilwrap ">
+          <a class="pilcrow" href="#section-1">&#182;</a>
+        </div>
+        
+      </td>
+      
+      <td class="code">
+        <div class='highlight'><pre><div class='highlight'><pre><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-keyword">import</span> Tabs <span class="hljs-keyword">from</span> <span class="hljs-string">'antd/lib/tabs'</span>;
+<span class="hljs-keyword">import</span> Icon <span class="hljs-keyword">from</span> <span class="hljs-string">'antd/lib/icon'</span>;
+<span class="hljs-keyword">import</span> Checkbox <span class="hljs-keyword">from</span> <span class="hljs-string">'antd/lib/checkbox'</span>;
+<span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">'antd/lib/button'</span>;
+<span class="hljs-keyword">import</span> Alert <span class="hljs-keyword">from</span> <span class="hljs-string">'antd/lib/alert'</span>;
+<span class="hljs-keyword">import</span> Beatle <span class="hljs-keyword">from</span> <span class="hljs-string">'beatle'</span>;
+
+<span class="hljs-keyword">import</span> {CustomForm} <span class="hljs-keyword">from</span> <span class="hljs-string">'hc-components'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'./index.less'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LoginScene</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  <span class="hljs-keyword">static</span> routeOptions = {
+    <span class="hljs-attr">title</span>: <span class="hljs-string">'登陆'</span>,
+    <span class="hljs-attr">layout</span>: <span class="hljs-string">'landingLayout'</span>
+  }
+
+  tabKeys = [<span class="hljs-string">'account'</span>, <span class="hljs-string">'mobile'</span>];
+
+  <span class="hljs-keyword">constructor</span>(props) {
+    <span class="hljs-keyword">super</span>(props);
+
+    <span class="hljs-keyword">this</span>.state = {
+      <span class="hljs-attr">count</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">errorMessage</span>: <span class="hljs-string">''</span>,
+      <span class="hljs-attr">activeKey</span>: <span class="hljs-string">'account'</span>
+    };
+  }
+
+  handleSbumit() {}
+
+  handleCaptcha() {
+    <span class="hljs-keyword">let</span> count = <span class="hljs-number">59</span>;
+    <span class="hljs-keyword">this</span>.setState({count});
+    <span class="hljs-keyword">this</span>.$interval_ = setInterval(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+      count -= <span class="hljs-number">1</span>;
+      <span class="hljs-keyword">this</span>.setState({count});
+      <span class="hljs-keyword">if</span> (count === <span class="hljs-number">0</span>) {
+        clearInterval(<span class="hljs-keyword">this</span>.$interval_);
+      }
+    }, <span class="hljs-number">1000</span>);
+  }
+
+  render() {
+    <span class="hljs-keyword">return</span> (
+      &lt;div className="j-scene j-scene-login"&gt;
+        &lt;Tabs
+          animated={false}
+          activeKey={this.state.activeKey}
+          onChange={key =&gt; this.setState({activeKey: key, errorMessage: ''})}&gt;
+          &lt;Tabs.TabPane tab="账户密码登录" key={this.tabKeys[0]}&gt;
+            {(this.state.errorMessage &amp;&amp; this.state.activeKey === this.tabKeys[0]) ?
+              (&lt;Alert
+                style={{
+                  marginBottom: 24
+                }}
+                message={this.state.errorMessage}
+                type="error"
+                showIcon
+              /&gt;) : null}
+            &lt;CustomForm
+              onSubmit={this
+                .handleSbumit
+                .bind(this)}
+              formLayout={{
+                labelCol: {
+                  span: 0
+                },
+                wrapperCol: {
+                  span: 24
+                }
+              }}
+              options={[{
+                type: 'string',
+                name: 'username',
+                title: '账号',
+                placeholder: 'admin',
+                rules: [
+                  {
+                    required: this.state.activeKey === 'account',
+                    message: '请输入账户名！'
+                  }
+                ],
+                getProps: () =&gt; {
+                  return {size: 'large', prefix: (&lt;Icon type="user" className="prefixIcon" /&gt;)};
+                }
+              }, {
+                type: 'string',
+                name: 'password',
+                title: '密码',
+                placeholder: 'admin',
+                rules: [
+                  {
+                    required: this.state.activeKey === 'account',
+                    message: '请输入密码！'
+                  }
+                ],
+                getProps: () =&gt; {
+                  return {size: 'large', prefix: (&lt;Icon type="lock" className="prefixIcon" /&gt;)};
+                }
+              }, {
+                type: 'boolean',
+                name: 'remember',
+                default: true,
+                render: (key, formItemWrapper, inputPops) =&gt; {
+                  return formItemWrapper((
+                    &lt;Checkbox {...inputPops}&gt;自动登录&lt;a className="elem-forgot" href=""&gt;忘记密码&lt;/a&gt;
+                    &lt;/Checkbox&gt;
+                  ), {valuePropName: 'checked'});
+                }
+              }
+              ]}
+              buttons={(
+                &lt;Button htmlType="submit" size="large" type="primary"&gt;登陆&lt;/Button&gt;
+              )}
+            /&gt;
+          &lt;/Tabs.TabPane&gt;
+          &lt;Tabs.TabPane tab="手机号登录" key={this.tabKeys[1]}&gt;
+            {(this.state.errorMessage &amp;&amp; this.state.activeKey === this.tabKeys[1]) ?
+              (&lt;Alert
+                style={{
+                  marginBottom: 24
+                }}
+                message={this.state.errorMessage}
+                type="error"
+                showIcon
+              /&gt;) : null}
+            &lt;CustomForm
+              onSubmit={this
+                .handleSbumit
+                .bind(this)}
+              formLayout={{
+                labelCol: {
+                  span: 0
+                },
+                wrapperCol: {
+                  span: 24
+                }
+              }}
+              options={[
+                {
+                  type: 'string',
+                  name: 'phone',
+                  title: '手机号',
+                  rules: [
+                    {
+                      required: this.state.activeKey === 'mobile',
+                      message: '请输入手机号！'
+                    }, {
+                      pattern: /^1\d{10}$/,
+                      message: '手机号格式错误！'
+                    }
+                  ],
+                  placeholder: '手机号',
+                  getProps: () =&gt; {
+                    return {size: 'large', prefix: (&lt;Icon type="mobile" className="prefixIcon" /&gt;)};
+                  }
+                }, {
+                  type: 'string',
+                  name: 'captcha',
+                  title: '验证码',
+                  placeholder: '验证码',
+                  className: 'elem-captcha',
+                  getProps: () =&gt; {
+                    return {size: 'large', prefix: (&lt;Icon type="mail" className="prefixIcon" /&gt;),
+                      suffix: (
+                        &lt;Button
+                          disabled={this.state.count &gt; 0}
+                          className="elem-captcha-btn"
+                          size="large"
+                          onClick={this
+                            .handleCaptcha
+                            .bind(this)}&gt;
+                          {this.state.count ? `${this.state.count} s` : '获取验证码'}
+                        &lt;/Button&gt;)
+                    };
+                  }
+                }, {
+                  type: 'boolean',
+                  name: 'remember',
+                  render: (key, formItemWrapper, inputPops) =&gt; {
+                    return formItemWrapper((
+                      &lt;Checkbox {...inputPops}&gt;自动登录&lt;a className="elem-forgot" href=""&gt;忘记密码&lt;/a&gt;
+                      &lt;/Checkbox&gt;
+                    ), {valuePropName: 'checked'});
+                  }
+                }
+              ]}
+              buttons={(
+                &lt;Button htmlType="submit" size="large" type="primary"&gt;登陆&lt;/Button&gt;
+              )}
+            /&gt;
+          &lt;/Tabs.TabPane&gt;
+        &lt;/Tabs&gt;
+        &lt;div className="elem-other"&gt;
+          其他登录方式
+          &lt;span className="iconAlipay" /&gt;
+          &lt;span className="iconTaobao" /&gt;
+          &lt;span className="iconWeibo" /&gt;
+          &lt;Beatle.Link className="elem-register" to="account/signup"&gt;注册账户&lt;/Beatle.Link&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+}</pre></div></pre><a href="javascript:;" class="link close"></a></div>
+      </td>
+      
+    </tr>
+    
+  </table>
+</div>
+</body>
+<script>
+  (function(win){
+    
+    var addEvent = (function() {
+      if (document.addEventListener) {
+        return function(el, type, fn) {
+          if (el.length) {
+            for (var i = 0, len = el.length; i < len; i++) {
+              addEvent(el[i], type, fn);
+            }
+          } else {
+            el.addEventListener(type, fn, false);
+          }
+        };
+      } else {
+        return function(el, type, fn) {
+          if (el.length) {
+            for (var i = 0, len = el.length; i < len; i++) {
+              addEvent(el[i], type, fn);
+            }
+          } else {
+            el.attachEvent('on' + type, function() {
+              return fn.call(el, window.event);
+            });
+          }
+        };
+      }
+    })();
+    
+    if(document.getElementsByClassName){
+      var links = document.getElementsByClassName('link');
+      for(var i = links.length; i--;){
+        (function(link){
+          addEvent(link, 'click', function(ev){
+            var pre = link.previousSibling;
+            if(link.className.indexOf('open') > -1){
+              link.className = link.className.replace('open', '') + ' close';
+              pre.className = '';
+            }else{
+              link.className = link.className.replace('close', '') + ' open';
+              pre.className = 'narrow';
+            }
+          });
+        })(links[i]);
+      }
+    }
+    
+    var demo = document.getElementById('J_demo');
+    var iframe = document.getElementById('J_iframe');
+    addEvent(demo, 'click', function(ev){
+      if(iframe.style.visibility === 'visible'){
+        iframe.style.visibility = 'hidden'
+      }else{
+        iframe.style.visibility = 'visible'
+      }
+    });
+  })(window);
+</script>
+</html>
