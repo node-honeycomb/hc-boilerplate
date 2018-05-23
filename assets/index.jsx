@@ -13,12 +13,13 @@ app.model(UserModel);
 
 const routes = require('./routes.jsx');
 app.route(routes);
-app.run(document.getElementById('main'));
 
 app.ajax.beforeRequest(function (urlCfg) {
   if (urlCfg.mock) {
     return Promise.resolve(urlCfg.mock);
   }
 });
+
+app.run(document.getElementById('main'));
 
 module.exports = app;
