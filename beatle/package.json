@@ -1,6 +1,6 @@
 {
   "name": "hc-boilerplate-beatle",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "a simple hc-bee boilerplate with beatle.",
   "main": "app.js",
   "scripts": {
