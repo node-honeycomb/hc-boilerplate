@@ -1,7 +1,8 @@
 'use strict';
 
-require('antd/dist/antd.css');
 import Beatle from 'beatle';
+import './index.less';
+
 const app = new Beatle({
   name: 'app'
 });

@@ -1,30 +1,111 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = {
+const config = {
+  context: __dirname,
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+
   entry: {
-    // 设置前端app的入口文件
-    app: path.join(__dirname, 'index.jsx')
+    app: './index.jsx'
   },
+
   output: {
-    // 设置前端打包的输出目录，修改此处会影响honeycomb package!!!
-    path: path.join(__dirname, '.package')
+    filename: '[name].js',
+    chunkFilename: '[name].js',
+    path: path.resolve('.package')
   },
+
+  resolve: {
+    extensions: ['.js', '.jsx', '.json']
+  },
+
   module: {
     rules: [
-      /* 默认支持的文件后缀
-      test: /\.css$/
-      test: /\.less$/
-      test: /\.(png|svg|jpg|gif)$/
-      test: /\.(woff|woff2|eot|ttf|otf)$/
-      test: /\.(js|jsx)$/
-      */
-      // 合并规则：根据test合并loaders，根据loader合并options
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
+
+        use: {
+          loader: 'babel-loader',
+
+          options: {
+            cacheDirectory: true,
+            presets: ['env', 'react'],
+
+            plugins: [
+              'add-module-exports',
+              'transform-decorators-legacy',
+              'transform-class-properties',
+              'transform-object-rest-spread'
+            ]
+          }
+        }
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+
+        use: {
+          loader: 'file-loader',
+
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'images/'
+          }
+        }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+
+        use: {
+          loader: 'file-loader',
+
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/'
+          }
+        }
+      },
+      {
+        test: /\.(less|css)$/,
+
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'less-loader',
+
+            options: {
+              javascriptEnabled: true
+            }
+          }
+        ]
+      }
     ]
   },
+
   plugins: [
-    // 合并规则：合并所有plugins，同名plugin只出现一次
+    new MiniCssExtractPlugin({
+      filename: '[name].css'
+    })
   ],
-  unPlugins: [
-    // 字符串，表示要去掉的plugin，如'UglifyJsPlugin'
-  ]
+
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: module =>
+            /[\\/]node_modules[\\/]/.test(module.resource) &&
+            module.constructor.name !== 'CssModule',
+          name: 'vendor',
+          chunks: 'all'
+        }
+      }
+    }
+  }
 };
+
+module.exports = config;

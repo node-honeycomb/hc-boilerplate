@@ -18,8 +18,8 @@ release: front
 
 front:
 	@echo "building assets..."
-	@npm install honeypack --registry=https://registry.npm.taobao.org
-	@cd assets && NODE_ENV=production npm install --registry=https://registry.npm.taobao.org
+	@NODE_ENV=development npm install honeypack --registry=https://registry.npm.taobao.org
+	@cd assets && NODE_ENV=development npm install --registry=https://registry.npm.taobao.org
 	@cd assets && ../node_modules/.bin/honeypack build
 	@if [ -d assets/static ]; then\
 		cp -r assets/static assets/.package/static;\

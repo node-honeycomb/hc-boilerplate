@@ -61,5 +61,7 @@ package-lock.json
 auto_router.js
 runtime_config.json
 document/
+out/
 .build
+.yo-rc.json
 
