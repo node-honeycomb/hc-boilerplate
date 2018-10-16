@@ -10,5 +10,8 @@ module.exports = {
     }
   },
   middleware: {
+    webpack: {
+      enable: false
+    }
   }
 };
