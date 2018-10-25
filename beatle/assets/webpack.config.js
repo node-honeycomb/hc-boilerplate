@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin');
 
 const config = {
   context: __dirname,
@@ -29,7 +30,10 @@ const config = {
           loader: 'babel-loader',
 
           options: {
-            cacheDirectory: true,
+            cacheDirectory: path.join(
+              __dirname,
+              '.honeypack_cache/babel-loader'
+            ),
             presets: ['env', 'react'],
 
             plugins: [
@@ -94,6 +98,13 @@ const config = {
   ],
 
   optimization: {
+    minimizer: [
+      new UglifyjsWebpackPlugin({
+        cache: path.join(__dirname, '.honeypack_cache/uglifyjs-webpack-plugin'),
+        parallel: true
+      })
+    ],
+
     splitChunks: {
       cacheGroups: {
         commons: {
