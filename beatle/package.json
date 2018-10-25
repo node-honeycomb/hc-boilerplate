@@ -1,6 +1,6 @@
 {
   "name": "hc-boilerplate-beatle",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "a simple hc-bee boilerplate with beatle.",
   "main": "app.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "eslint": "^4.13.1",
     "eslint-config-aliyun": "^2.0.1",
     "eslint-plugin-react": "^7.5.1",
-    "honeypack": "1.0.6",
+    "honeypack": "^1.0.6",
     "intelli-espower-loader": "^1.0.1",
     "istanbul": "^0.4.5",
     "mocha": "^5.0.0",
