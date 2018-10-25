@@ -64,4 +64,4 @@ document/
 out/
 .build
 .yo-rc.json
-
+assets/.honeypack_cache

@@ -38,6 +38,7 @@
     "file-loader": "^2.0.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
-    "mini-css-extract-plugin": "^0.4.4"
+    "mini-css-extract-plugin": "^0.4.4",
+    "uglifyjs-webpack-plugin": "^2.0.1"
   }
 }
