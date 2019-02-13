@@ -65,3 +65,4 @@ out/
 .build
 .yo-rc.json
 assets/.honeypack_cache
+assets/node_modules/
