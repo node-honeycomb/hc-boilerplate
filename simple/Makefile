@@ -18,9 +18,6 @@ release: front
 
 front:
 	@echo "building assets..."
-	@npm install honeypack
-	@cd assets && NODE_ENV=production npm install
-	@cd assets && ../node_modules/.bin/honeypack build
 	@if [ -d assets/static ]; then\
 		cp -r assets/static assets/.package/static;\
 	fi
