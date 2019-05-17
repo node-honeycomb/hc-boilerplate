@@ -1,8 +1,8 @@
 {
   "name": "hc-boilerplate-simple",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "a simple hc-bee boilerplate",
-  "main": "",
+  "main": "app.js",
   "scripts": {
     "test": "make test",
     "eslint": "eslint --ext .js --ext .jsx --ignore-path .gitignore .",
