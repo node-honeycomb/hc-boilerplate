@@ -1,19 +1,9 @@
 {
   "name": "honeycomb-seed-front",
-  "version": "1.0.0",
-  "description": "honeycomb-front use beatle.",
   "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "beatle",
-    "react",
-    "redux",
-    "react-router"
-  ],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "beatle": "0.0.19",
     "beatle-dialog": "2.0.1",
