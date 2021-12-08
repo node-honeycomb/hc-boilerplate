@@ -1,6 +1,6 @@
 {
   "name": "hc-boilerplate-simple",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "a simple hc-bee boilerplate",
   "main": "app.js",
   "scripts": {

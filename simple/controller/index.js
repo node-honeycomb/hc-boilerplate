@@ -11,7 +11,7 @@ exports.helloText = function (req, callback) {
 };
 
 /**
- * @api /
+ * @api /*
  */
 exports.welcomeTpl = function (req, callback) {
   callback(null, {
