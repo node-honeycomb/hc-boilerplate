@@ -16,7 +16,7 @@
     "hc-mocker": "0.0.3",
     "path-ignore": "1.0.1",
     "honeypack": "0.1.12",
-    "lodash": "4.17.4"
+    "lodash": "4.17.19"
   },
   "devDependencies": {
     "api-annotation": "*",
